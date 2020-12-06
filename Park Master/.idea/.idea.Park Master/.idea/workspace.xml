@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:feature" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:feature" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:feature" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:SFA-7587_sf.game-gramework" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:temp" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="BuildServerSettings">
+    <option name="LOGIN" value="" />
+    <option name="SERVER_URL" value="" />
+    <option name="COMMIT_PATTERN" value="{message}" />
+    <option name="REMEMBER_ME" value="true" />
+    <option name="USE_IDEA_PROXY_SETTINGS" value="true" />
+    <option name="INSPECTIONS_BUILD_TYPE_IDS" />
+    <option name="DUPLICATES_BUILD_TYPE_IDS" />
+    <option name="ENABLE_SUITABLE_CONFIGURATION_CACHING" value="true" />
+    <option name="COVERAGE_SETTINGS" />
+    <option name="TEST_STATUS_ENABLED" value="true" />
+    <option name="TEST_STATUS_SHOW_SUCCESSFUL" value="false" />
+    <option name="POSTPONE_SUITABLE_CONFIGURATIONS_SEARCH" value="false" />
+    <option name="ARTIFACTS_BUILD_TYPE_IDS" />
+    <option name="PERFORM_COMMIT_IF_SUCCESSFUL" value="true" />
+    <option name="PERFORM_COMMIT_IF_NO_NEW_FAILED_TESTS" value="false" />
+    <option name="REQUEST_CONFIRMATON" value="false" />
+    <option name="PRE_TESTED_COMMIT" value="true" />
+    <option name="FILTER_BY_STATUS" value="false" />
+    <option name="FILTER_MARKED_AS_FIXED" value="false" />
+    <option name="TOOL_WINDOW_SELECTED_CONTENT_INDEX" value="0" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6de7fee0-8de1-4041-80fe-dd3a154efa5d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../com.banzai.localization/Assets/Plugins/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../com.banzai.localization/Assets/Plugins/Editor.meta" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../../../../Migration story/Assets/scr/Input/InputConfig.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Managment/GameStateManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Mechanics/Bezier/BezierPointsCreator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Configs/BezierSettingsConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0F94C1EB-F56E-4093-9016-8300CFA09D94/11/a6482e04/LineRenderer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://B:/WorkProjects/Tiny Tanks/Assets/Scripts/Game Basics/GameField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Mechanics/Bezier/LineRendererPathBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Mechanics/Bezier/CarPathControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scr/Installers/EnterPointInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scr/Managment/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scr/Managment/GameStateManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scr/Mechanics/Bezier/LineRendererBezierBuilder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scr/Configs/BezierSettingsConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scr/Factories/CarPathFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scr/Installers/PoolHelper.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scr/Factories/LineRendererPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scr/Mechanics/Bezier/BezierPointsCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scr/Configs/CarsPathesConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scr/Installers/ParkMasterSceneInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scr/Mechanics/Bezier/CarPathControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scr/Mechanics/Bezier/LineRendererPathBuilder.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1lEpzz833wimC0aTiJoDNKlfkTm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6de7fee0-8de1-4041-80fe-dd3a154efa5d" name="Default Changelist" comment="" />
+      <created>1607172371782</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607172371782</updated>
+      <workItem from="1607172377612" duration="3000" />
+      <workItem from="1607172500273" duration="9603000" />
+      <workItem from="1607243556748" duration="2293000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="410" height="466" key="DebuggerActiveHint" timestamp="1607179264882">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="410" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1607179264882" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1607178786851">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1607178786851" />
+    <state width="1877" height="375" key="GridCell.Tab.0.bottom" timestamp="1607185650969">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1607185650969" />
+    <state width="1877" height="375" key="GridCell.Tab.0.center" timestamp="1607185650967">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1607185650967" />
+    <state width="1877" height="375" key="GridCell.Tab.0.left" timestamp="1607185650951">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1607185650951" />
+    <state width="1877" height="375" key="GridCell.Tab.0.right" timestamp="1607185650969">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1607185650969" />
+    <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1607185650971">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1607185650971" />
+    <state width="1877" height="375" key="GridCell.Tab.1.center" timestamp="1607185650970">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1607185650970" />
+    <state width="1877" height="375" key="GridCell.Tab.1.left" timestamp="1607185650970">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1607185650970" />
+    <state width="1877" height="375" key="GridCell.Tab.1.right" timestamp="1607185650970">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1607185650970" />
+    <state width="1877" height="375" key="GridCell.Tab.2.bottom" timestamp="1607185650971">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1607185650971" />
+    <state width="1877" height="375" key="GridCell.Tab.2.center" timestamp="1607185650971">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1607185650971" />
+    <state width="1877" height="375" key="GridCell.Tab.2.left" timestamp="1607185650971">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1607185650971" />
+    <state width="1877" height="375" key="GridCell.Tab.2.right" timestamp="1607185650971">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1607185650971" />
+    <state width="1877" height="375" key="GridCell.Tab.3.bottom" timestamp="1607185650972">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.bottom/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1607185650972" />
+    <state width="1877" height="375" key="GridCell.Tab.3.center" timestamp="1607185650971">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.center/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1607185650971" />
+    <state width="1877" height="375" key="GridCell.Tab.3.left" timestamp="1607185650971">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.left/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1607185650971" />
+    <state width="1877" height="375" key="GridCell.Tab.3.right" timestamp="1607185650972">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.right/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1607185650972" />
+    <state x="670" y="197" key="RiderGenerateDialog" timestamp="1607183522140">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="670" y="197" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1607183522140" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607185424278">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1607185424278" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scr/Mechanics/Bezier/BezierPointsCreator.cs</url>
+          <line>46</line>
+          <properties documentPath="C:\WorkProjects\SFA-Packages\SFA-Packages\Assets\unity-common-packages\Park Master\Assets\Scr\Mechanics\Bezier\BezierPointsCreator.cs" initialLine="39">
+            <startOffsets>
+              <option value="1298" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1312" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scr/Mechanics/Bezier/BezierPointsCreator.cs</url>
+          <line>42</line>
+          <properties documentPath="C:\WorkProjects\SFA-Packages\SFA-Packages\Assets\unity-common-packages\Park Master\Assets\Scr\Mechanics\Bezier\BezierPointsCreator.cs" initialLine="35">
+            <startOffsets>
+              <option value="1225" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1252" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scr/Mechanics/Bezier/BezierPointsCreator.cs</url>
+          <line>34</line>
+          <properties documentPath="C:\WorkProjects\SFA-Packages\SFA-Packages\Assets\unity-common-packages\Park Master\Assets\Scr\Mechanics\Bezier\BezierPointsCreator.cs" initialLine="27">
+            <startOffsets>
+              <option value="892" />
+            </startOffsets>
+            <endOffsets>
+              <option value="915" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
