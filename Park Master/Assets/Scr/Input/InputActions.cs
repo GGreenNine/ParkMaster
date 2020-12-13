@@ -6,10 +6,10 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-public class @InputActions : IInputActionCollection, IDisposable
+public class @InputMaster : IInputActionCollection, IDisposable
 {
     public InputActionAsset asset { get; }
-    public @InputActions()
+    public @InputMaster()
     {
         asset = InputActionAsset.FromJson(@"{
     ""name"": ""InputActions"",
@@ -36,11 +36,11 @@ public class @InputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""LeftHold"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""58f2c8a9-71e9-4b2a-849f-511334720191"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
-                    ""interactions"": ""Hold""
+                    ""interactions"": ""Hold(duration=1,pressPoint=2)""
                 }
             ],
             ""bindings"": [
@@ -48,7 +48,7 @@ public class @InputActions : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""36ff2e58-ea46-451d-b1f4-de40aa04dc18"",
                     ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""LeftClick"",
@@ -59,7 +59,7 @@ public class @InputActions : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""b29de5ab-68bb-460e-894d-94eb8e2635e9"",
                     ""path"": ""<Mouse>/rightButton"",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""RightClick"",
@@ -141,8 +141,8 @@ public class @InputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_GameControl_LeftHold;
     public struct GameControlActions
     {
-        private @InputActions m_Wrapper;
-        public GameControlActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        private @InputMaster m_Wrapper;
+        public GameControlActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
         public InputAction @LeftClick => m_Wrapper.m_GameControl_LeftClick;
         public InputAction @RightClick => m_Wrapper.m_GameControl_RightClick;
         public InputAction @LeftHold => m_Wrapper.m_GameControl_LeftHold;

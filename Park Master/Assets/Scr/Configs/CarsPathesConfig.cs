@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Scr.Configs
 {
-    [CreateAssetMenu(fileName = "BezierSettings", menuName = "GameSettings")]
+    [CreateAssetMenu(fileName = "CarsPathesConfig", menuName = "CarsPathes")]
     public class CarsPathesConfig : ScriptableObject
     {
         [Serializable]
