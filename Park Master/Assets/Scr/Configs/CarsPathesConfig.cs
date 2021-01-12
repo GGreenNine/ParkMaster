@@ -14,6 +14,7 @@ namespace Scr.Configs
         {
             public Color color;
             public float width;
+            public float yOffset = 0.02f;
         }
         
         [Serializable]

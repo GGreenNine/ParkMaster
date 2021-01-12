@@ -11,9 +11,9 @@ namespace Scr.Mechanics.Bezier
     
     public enum CarType
     {
-        None,
-        Blue,
-        Yellow
+        None = 0,
+        Blue = 1,
+        Yellow = 2
     }
 
     public class BezierPointsCreator : IPointsCreator

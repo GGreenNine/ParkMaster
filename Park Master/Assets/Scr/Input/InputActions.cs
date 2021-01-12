@@ -24,7 +24,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""id"": ""853ee2f2-0198-4614-9a84-23dab71810aa"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Tap""
+                    ""interactions"": """"
                 },
                 {
                     ""name"": ""RightClick"",
@@ -36,11 +36,19 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""LeftHold"",
-                    ""type"": ""Value"",
+                    ""type"": ""Button"",
                     ""id"": ""58f2c8a9-71e9-4b2a-849f-511334720191"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Hold(duration=1,pressPoint=2)""
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Mouse position"",
+                    ""type"": ""Value"",
+                    ""id"": ""80a4319f-2ecc-40ac-a910-c90ba343096d"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -70,10 +78,21 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""1b4fe6e3-6eb2-4dcc-b735-74eff1a86c63"",
                     ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
+                    ""interactions"": ""Hold(duration=1)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""LeftHold"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5d520ea2-df0e-4327-86c3-d16cad12be7c"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Mouse position"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -87,6 +106,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
         m_GameControl_LeftClick = m_GameControl.FindAction("LeftClick", throwIfNotFound: true);
         m_GameControl_RightClick = m_GameControl.FindAction("RightClick", throwIfNotFound: true);
         m_GameControl_LeftHold = m_GameControl.FindAction("LeftHold", throwIfNotFound: true);
+        m_GameControl_Mouseposition = m_GameControl.FindAction("Mouse position", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -139,6 +159,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
     private readonly InputAction m_GameControl_LeftClick;
     private readonly InputAction m_GameControl_RightClick;
     private readonly InputAction m_GameControl_LeftHold;
+    private readonly InputAction m_GameControl_Mouseposition;
     public struct GameControlActions
     {
         private @InputMaster m_Wrapper;
@@ -146,6 +167,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
         public InputAction @LeftClick => m_Wrapper.m_GameControl_LeftClick;
         public InputAction @RightClick => m_Wrapper.m_GameControl_RightClick;
         public InputAction @LeftHold => m_Wrapper.m_GameControl_LeftHold;
+        public InputAction @Mouseposition => m_Wrapper.m_GameControl_Mouseposition;
         public InputActionMap Get() { return m_Wrapper.m_GameControl; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -164,6 +186,9 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @LeftHold.started -= m_Wrapper.m_GameControlActionsCallbackInterface.OnLeftHold;
                 @LeftHold.performed -= m_Wrapper.m_GameControlActionsCallbackInterface.OnLeftHold;
                 @LeftHold.canceled -= m_Wrapper.m_GameControlActionsCallbackInterface.OnLeftHold;
+                @Mouseposition.started -= m_Wrapper.m_GameControlActionsCallbackInterface.OnMouseposition;
+                @Mouseposition.performed -= m_Wrapper.m_GameControlActionsCallbackInterface.OnMouseposition;
+                @Mouseposition.canceled -= m_Wrapper.m_GameControlActionsCallbackInterface.OnMouseposition;
             }
             m_Wrapper.m_GameControlActionsCallbackInterface = instance;
             if (instance != null)
@@ -177,6 +202,9 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @LeftHold.started += instance.OnLeftHold;
                 @LeftHold.performed += instance.OnLeftHold;
                 @LeftHold.canceled += instance.OnLeftHold;
+                @Mouseposition.started += instance.OnMouseposition;
+                @Mouseposition.performed += instance.OnMouseposition;
+                @Mouseposition.canceled += instance.OnMouseposition;
             }
         }
     }
@@ -186,5 +214,6 @@ public class @InputMaster : IInputActionCollection, IDisposable
         void OnLeftClick(InputAction.CallbackContext context);
         void OnRightClick(InputAction.CallbackContext context);
         void OnLeftHold(InputAction.CallbackContext context);
+        void OnMouseposition(InputAction.CallbackContext context);
     }
 }

@@ -16,7 +16,7 @@ namespace Scr.Mechanics.Car
             ObjectSelector = objectSelector;
         }
 
-        private void Awake()
+        protected virtual void Awake()
         {
             ObjectSelector.SelectedGameobject.Subscribe(OnSelectedGameObjectChange).AddTo(OnDestroyDisposable);
         }

@@ -6,21 +6,24 @@ using Zenject;
 
 namespace Scr.Input
 {
-    public interface IInputObservable
+    public interface IInputMaster
     {
         IReactiveProperty<bool> LeftHolded { get; }
-        IReactiveProperty<bool> LeftClicked { get; }
+        IObservable<Unit> LeftClicked { get; }
+        Vector3 MousePosition { get; }
     }
 
-    public class InputMasterObservable : IInitializable, IDisposable, IInputObservable
+    public class InputMaster : IInitializable, IDisposable, IInputMaster
     {
-        private readonly InputMaster _inputActions = new InputMaster();
+        private readonly global::InputMaster _inputActions = new global::InputMaster();
         
         private readonly ReactiveProperty<bool> leftHolded = new ReactiveProperty<bool>();
         private readonly Subject<Unit> leftClicked = new Subject<Unit>();
 
+        public Vector3 MousePosition => _inputActions.GameControl.Mouseposition.ReadValue<Vector2>();
+
         public IReactiveProperty<bool> LeftHolded => leftHolded;
-        public IReactiveProperty<bool> LeftClicked => leftHolded;
+        public IObservable<Unit> LeftClicked => leftClicked;
 
 
         public void Initialize()
@@ -33,18 +36,18 @@ namespace Scr.Input
             _inputActions.Enable();
             _inputActions.GameControl.LeftHold.performed += context =>
             {
-                Debug.Log("holded");
                 leftHolded.Value = true;
             };
             _inputActions.GameControl.LeftHold.started += context =>
             {
-                Debug.Log("holded started");
             };
-            _inputActions.GameControl.LeftHold.canceled += context => leftHolded.Value = false;
+            _inputActions.GameControl.LeftHold.canceled += context =>
+            {
+                leftHolded.Value = false;
+            };
         
             _inputActions.GameControl.LeftClick.performed += context =>
             {
-                Debug.Log("Clicked");
                 leftClicked.OnNext(Unit.Default);
             };
         }

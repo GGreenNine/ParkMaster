@@ -1,14 +1,25 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Scr.Mechanics.Bezier;
+using Scr.Mechanics.Car;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Zenject;
 using Random = UnityEngine.Random;
 
 namespace Asteroids
 {
-    public class GameStateManager 
+    public class GameStateManager : MonoBehaviour
     {
+        private IFactory<CarType, CarController> _carFactory;
+        
+        [Inject]
+        private void SetDependencies(IFactory<CarType, CarController> carFactory)
+        {
+            _carFactory = carFactory;
+        }
+        
         public enum GameState
         {
             Pause,
@@ -41,6 +52,8 @@ namespace Asteroids
 
         private void Start()
         {
+            var car = _carFactory.Create(CarType.Blue);
+            car.transform.position = new Vector3(0,0.02f, 0);
             // StartCoroutine(Background_Game_Workflow());
         }
 

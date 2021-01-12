@@ -5,18 +5,21 @@ namespace Scr.Input
     public interface IRaycastingSystem
     {
         T TryToGetGameObjectOfType<T>(int layer) where T : Component;
-        GameObject TryToGetGameObject(int layer);
-        Vector3? TryToGetPoint(int layer);
+        GameObject TryToGetGameObject(LayerMask layer);
+        Vector3? TryToGetPoint(LayerMask layer);
     }
     
     public class RaycastingSystem : IRaycastingSystem
     {
         private readonly Camera _raycastCamera;
         private float rayMaxRange = 1000;
+        private readonly IInputMaster _inputMaster;
 
-        public RaycastingSystem(Camera raycastCamera)
+
+        public RaycastingSystem(Camera raycastCamera, IInputMaster inputMaster)
         {
             _raycastCamera = raycastCamera;
+            _inputMaster = inputMaster;
         }
 
         public T TryToGetGameObjectOfType<T>(int layer) where T : Component
@@ -33,27 +36,27 @@ namespace Scr.Input
             return null;
         }
         
-        public GameObject TryToGetGameObject(int layer)
+        public GameObject TryToGetGameObject(LayerMask layer)
         {
-            int layerMask = 1 << layer;
-            var ray = _raycastCamera.ScreenPointToRay(UnityEngine.Input.mousePosition);
-
-            if (Physics.Raycast(ray, out var hit, rayMaxRange, layerMask))
+            Debug.Log("trying to get gameobject");
+            var ray = _raycastCamera.ScreenPointToRay(_inputMaster.MousePosition);
+            
+            if (Physics.Raycast(ray, out var hit, rayMaxRange, layer))
             {
                 var objectHit = hit.transform.gameObject;
+                Debug.Log($"Gameobject finded {objectHit}");
+
                 return objectHit;
             }
 
             return null;
         }
 
-        public Vector3? TryToGetPoint(int layer)
+        public Vector3? TryToGetPoint(LayerMask layer)
         {
-            int layerMask = 1 << layer;
-            
-            var ray = _raycastCamera.ScreenPointToRay(UnityEngine.Input.mousePosition);
+            var ray = _raycastCamera.ScreenPointToRay(_inputMaster.MousePosition);
 
-            if (Physics.Raycast(ray, out var hit, rayMaxRange, layerMask))
+            if (Physics.Raycast(ray, out var hit, rayMaxRange, layer))
             {
                 return hit.point;
             }
@@ -61,11 +64,7 @@ namespace Scr.Input
             return null;
         }
         
-        public static bool LayerInLayerMask(int layer, LayerMask layerMask)
-        {
-            return ((1 << layer) & layerMask) != 0;
-        }
 
-        
+
     }
 }

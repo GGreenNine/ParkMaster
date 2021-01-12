@@ -1,6 +1,7 @@
 ﻿using System;
 using UniRx;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Zenject;
 
 namespace Scr.Input
@@ -19,24 +20,27 @@ namespace Scr.Input
         public IReactiveProperty<GameObject> SelectedGameobject => _selectedGameobject;
 
         private readonly CompositeDisposable _disposable = new CompositeDisposable();
-        private readonly IInputObservable _inputObservable;
+        private readonly IInputMaster _inputMaster;
         private readonly IRaycastingSystem _raycastingSystem;
 
-        public ObjectSelector(IInputObservable inputObservable, IRaycastingSystem raycastingSystem)
+        public ObjectSelector(IInputMaster inputMaster, IRaycastingSystem raycastingSystem)
         {
-            _inputObservable = inputObservable;
+            _inputMaster = inputMaster;
             _raycastingSystem = raycastingSystem;
         }
         
         public void Initialize()
         {
-            _inputObservable.LeftHolded.Subscribe(OnHolded).AddTo(_disposable);
+            _inputMaster.LeftHolded.Subscribe(OnHolded).AddTo(_disposable);
         }
         
         private void OnHolded(bool isHolding)
         {
+            Debug.Log("OnHolded");
             if (isHolding)
             {
+                Debug.Log("Holding");
+
                 var hitObject = _raycastingSystem.TryToGetGameObject(_layerMask.value);
                 if (hitObject != null)
                 {

@@ -11,7 +11,8 @@ namespace Scr.Mechanics.Bezier
 {
     public interface IPathBuilder
     {
-        // void BuildPath(CarType type, Vector3[] points);
+        void StartBuilding(CarType type);
+        IEnumerable<Vector3> StopBuilding(CarType type);
     }
 
     public class LineRendererPathBuilder : MonoBehaviour, IPathBuilder
@@ -19,12 +20,11 @@ namespace Scr.Mechanics.Bezier
         [SerializeField] private CarPathControl[] _carPathControls;
         //todo make layers config
         private LayerMask groundLayer;
- 
+        private readonly CompositeDisposable carPathDrawindDisposable = new CompositeDisposable();
         private Dictionary<CarType, CarPathControl> carPathControlsDictionary = new Dictionary<CarType, CarPathControl>();
         private IRaycastingSystem _raycastingSystem;
-        private List<Vector3> points = new List<Vector3>();
         
-        
+        [Inject]
         private void SetDependencies(IRaycastingSystem raycastingSystem)
         {
             _raycastingSystem = raycastingSystem;
@@ -37,34 +37,41 @@ namespace Scr.Mechanics.Bezier
             DisableAllPathes();
         }
 
-        public void StartBuildingPath(CarType type)
+        public void StartBuilding(CarType type)
         {
-            Observable.EveryUpdate().Subscribe(l =>
-            {
-                GetPathNextPoint(type);
-            });
+            carPathControlsDictionary.TryGetValue(type, out var carPathControl);
+            if (carPathControl is null) return;
+            carPathControl.ClearPath();
+            Observable.EveryUpdate().Subscribe(l => { GetPathNextPoint(carPathControl); })
+                    .AddTo(carPathDrawindDisposable);
         }
 
-        private void GetPathNextPoint(CarType type)
+        public IEnumerable<Vector3> StopBuilding(CarType type)
+        {
+            carPathControlsDictionary.TryGetValue(type, out var carPathControl);
+            if (!(carPathControl is null))
+            {
+                carPathDrawindDisposable.Clear();
+                return carPathControl.GetPath();
+            }
+            throw new Exception($"{type.ToString()} car type does not exist in path builder");
+        }
+
+        private void GetPathNextPoint(CarPathControl path)
         {
             var point = _raycastingSystem.TryToGetPoint(groundLayer.value);
             if (point != null)
             {
-                points.Add(point.Value);
-                if (points.Count > 3)
-                {
-                    BuildPath(type, points);
-                }
+                BuildPath(path, point.Value);
             }
         }
 
-        public void BuildPath(CarType type, IEnumerable<Vector3> path)
+        public void BuildPath(CarPathControl path, Vector3 newPoint)
         {
-            carPathControlsDictionary.TryGetValue(type, out var carPathControl);
-            if (carPathControl != null)
+            if (path != null)
             {
-                carPathControl.gameObject.SetActive(true);
-                carPathControl.UpdatePath(path);
+                path.gameObject.SetActive(true);
+                path.UpdatePath(newPoint);
             }
         }
 
@@ -79,6 +86,11 @@ namespace Scr.Mechanics.Bezier
         private void EnablePath(CarPathControl carPathControl)
         {
             carPathControl.gameObject.SetActive(true);
+        }
+
+        private void OnDestroy()
+        {
+            carPathDrawindDisposable.Dispose();
         }
     }
 }

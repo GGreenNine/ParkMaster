@@ -15,7 +15,11 @@ namespace Scr.Mechanics.Bezier
         public CarType CarType => _carType;
 
         private CarsPathesConfig _carsPathesConfig;
-        
+        private readonly List<Vector3> pathPoints = new List<Vector3>();
+        public IEnumerable<Vector3> GetPath() => pathPoints;
+
+        private CarsPathesConfig.LineRendererSettings _lineRendererSettings;
+
         [Inject]
         private void Inject(CarsPathesConfig carsPathesConfig)
         {
@@ -24,13 +28,25 @@ namespace Scr.Mechanics.Bezier
 
         private void Awake()
         {
-            SetPathSettings(_carsPathesConfig.GetLineRendererSettings(_carType).LineRendererSettings);
+            _lineRendererSettings = _carsPathesConfig.GetLineRendererSettings(_carType).LineRendererSettings;
+            SetPathSettings(_lineRendererSettings);
         }
 
-        public void UpdatePath(IEnumerable<Vector3> points)
+
+        public void UpdatePath(Vector3 point)
         {
-            _lineRenderer.positionCount = points.Count();
-            _lineRenderer.SetPositions(points.ToArray());
+            pathPoints.Add(new Vector3(point.x, _lineRendererSettings.yOffset, point.z));
+            if (pathPoints.Count > 3)
+            {
+                _lineRenderer.positionCount = pathPoints.Count();
+                _lineRenderer.SetPositions(pathPoints.ToArray());
+            }
+        }
+
+        public void ClearPath()
+        {
+            _lineRenderer.SetPositions(new Vector3[]{});
+            pathPoints.Clear();
         }
 
         public void SetPathSettings(CarsPathesConfig.LineRendererSettings lineRendererSettings)

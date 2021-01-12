@@ -13,3 +13,7 @@ MonoBehaviour:
   m_Name: PrefabPathConfig
   m_EditorClassIdentifier: 
   lineRendererPathBuilder: Prefabs/PathBuilder
+  carPrefabPatheses:
+  - _type: 1
+    carPath: Cars/Raider
+  blueCarPath: Cars/Raider
