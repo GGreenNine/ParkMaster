@@ -10,33 +10,37 @@ namespace Scr.Mechanics.Car
     {
         void Move(Vector3[] path, float speed, Transform transform, ObjectMoveStrategy objectMoveStrategy, ObjectRotateStrategy objectRotateStrategy);
         void StopMoving();
-        bool IsPlaying { get; }
     }
 
-    public class ObjectPathMover : InGameTweener, IPathMover
+    public class ObjectPathMover : IPathMover
     {
-        private int currentWaypoint = 0;
+        private readonly SerialDisposable moveDisposable = new SerialDisposable();
         
         public void Move(Vector3[] path, float speed, Transform transform, ObjectMoveStrategy objectMoveStrategy, ObjectRotateStrategy objectRotateStrategy)
         {
-            Observable.EveryUpdate().Subscribe(l =>
+            int currentWaypoint = 0;
+            moveDisposable.Disposable = Observable.EveryUpdate().Subscribe(l =>
             {
                 if (currentWaypoint < path.Length)
                 {
-                    objectMoveStrategy.Move(transform, path[currentWaypoint], speed);
                     objectRotateStrategy.Rotate(transform, path[currentWaypoint], speed);
+                    objectMoveStrategy.Move(transform, path[currentWaypoint], speed);
                     
                     if (transform.position.AlmostEqual(path[currentWaypoint], 0.01f))
                     {
                         currentWaypoint++;
                     }
                 }
-            }); // todo addto
+            }); 
         }
 
         public void StopMoving()
         {
-            Stop();
+        }
+
+        public void Dispose()
+        {
+            moveDisposable.Dispose();
         }
     }
 
@@ -66,15 +70,9 @@ namespace Scr.Mechanics.Car
     {
         public override void Rotate(Transform current, Vector3 target, float args)
         {
-            var rotation = current.rotation;
-            var tunedTargetRotation = new Vector3(rotation.x, current.rotation.y, rotation.z);
-            // current.rotation = Quaternion.Lerp(current.rotation,
-            //         new Quaternion(tunedTargetRotation.x, tunedTargetRotation.y, tunedTargetRotation.z,
-            //                 current.rotation.w), 0.5f);
-            var targetRotation = 
-            
-            current.rotation = new Quaternion(tunedTargetRotation.x, tunedTargetRotation.y, tunedTargetRotation.z,
-                    current.rotation.w);
+            var targetRotation = Quaternion.LookRotation(target - current.position).normalized;
+            Debug.Log(targetRotation);
+            current.rotation = Quaternion.Slerp(current.rotation, targetRotation, Time.deltaTime * args);
         }
     }
 }

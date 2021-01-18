@@ -43,7 +43,7 @@ namespace Scr.Mechanics
             }
         }
 
-        public void Dispose()
+        public virtual void Dispose()
         {
             Stop();
         }

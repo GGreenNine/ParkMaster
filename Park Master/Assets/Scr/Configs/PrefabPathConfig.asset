@@ -15,5 +15,5 @@ MonoBehaviour:
   lineRendererPathBuilder: Prefabs/PathBuilder
   carPrefabPatheses:
   - _type: 1
-    carPath: Cars/Raider
-  blueCarPath: Cars/Raider
+    carPath: Cars/CarGreen
+  blueCarPath: Cars/CarGreen

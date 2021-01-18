@@ -44,21 +44,13 @@ namespace Scr.Installers
                     _prefabPathConfig.blueCarPath,
                     (container, type) =>
                     {
-                        var carModel = new CarModel(type, 25);
+                        var carModel = new CarModel(type, 15);
                         container.Bind<CarModel>().FromInstance(carModel).AsSingle();
                         container.BindInterfacesTo<ObjectPathMover>().AsSingle();
                         container.BindInterfacesAndSelfTo<LineRendererPathBuilder>()
                                 .FromComponentInNewPrefabResource(_prefabPathConfig.lineRendererPathBuilder).AsSingle();
                         container.Bind<CarController>().FromComponentOnRoot().AsSingle();
                     });
-            
-            void CarInject(CarType type, DiContainer subContainer)
-            {
-                var model = new CarModel(type, 0.5f); // todo add Cars config to store cars parameters
-                subContainer.BindInterfacesAndSelfTo<ObjectPathMover>().AsSingle();
-                subContainer.BindInstance(model).AsSingle();
-                subContainer.Bind<CarController>().FromComponentsOnRoot().AsSingle();
-            }
             
             // Container.BindInterfacesAndSelfTo<CarFactory>().AsSingle();
         }
