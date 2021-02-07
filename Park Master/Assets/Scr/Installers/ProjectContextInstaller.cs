@@ -11,6 +11,14 @@ namespace Scr.Installers
         public override void InstallBindings()
         {
             Container.Bind<PrefabPathConfig>().FromScriptableObject(_prefabPathConfig).AsSingle();
+            Container.BindInterfacesAndSelfTo<PlayerState>().AsSingle().NonLazy();
+            BindDataLoaders();
+        }
+
+
+        private void BindDataLoaders()
+        {
+            Container.Bind<LevelLoadParser>().AsSingle();
         }
     }
 }

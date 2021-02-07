@@ -1,6 +1,7 @@
 ﻿using System;
 using Scr.Configs;
 using Scr.Input;
+using Scr.Mechanics;
 using Scr.Mechanics.Bezier;
 using Scr.Mechanics.Car;
 using UnityEngine;
@@ -23,15 +24,17 @@ namespace Scr.Installers
             Container.Bind<CarsPathesConfig>().FromScriptableObject(carsPathesConfig).AsSingle();
             Container.BindInterfacesTo<BezierPointsCreator>().AsSingle().Lazy();
 
-
+            Container.BindInterfacesAndSelfTo<InGameBonusCollector>().AsSingle();
 
             Container.BindInterfacesAndSelfTo<Input.InputMaster>().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<ObjectSelector>().AsSingle().NonLazy();
             Container.BindInterfacesTo<RaycastingSystem>().AsSingle();
 
             Container.Bind<Camera>().FromInstance(raycastCamera).WhenInjectedInto<IRaycastingSystem>();
-
+            Container.BindInterfacesTo<LevelLoader>().AsSingle();
+            
             BindCars();
+            BindBonuses();
 
             // Container.BindIFactory<>()<LineRendererPool>().WithInitialSize(5).FromNewComponentOnNewGameObject().NonLazy();
         }
@@ -40,8 +43,7 @@ namespace Scr.Installers
         {
             Container.BindInterfacesTo<ObjectPathMover>().AsTransient();
 
-            Container.BindIFactory<CarType, CarController>().FromSubContainerResolve().ByNewPrefabResourceMethod(
-                    _prefabPathConfig.blueCarPath,
+            Container.BindIFactory<CarType, CarController>().FromSubContainerResolve().ByMethod(
                     (container, type) =>
                     {
                         var carModel = new CarModel(type, 15);
@@ -49,11 +51,21 @@ namespace Scr.Installers
                         container.BindInterfacesTo<ObjectPathMover>().AsSingle();
                         container.BindInterfacesAndSelfTo<LineRendererPathBuilder>()
                                 .FromComponentInNewPrefabResource(_prefabPathConfig.lineRendererPathBuilder).AsSingle();
-                        container.Bind<CarController>().FromComponentOnRoot().AsSingle();
+                        var car = container.InstantiatePrefabResource(_prefabPathConfig.GetCarPathByCarType(type)).GetComponent<CarController>();
+                        container.Bind<CarController>().FromInstance(car);
                     });
-            
-            // Container.BindInterfacesAndSelfTo<CarFactory>().AsSingle();
+        }
+
+        private void BindBonuses()
+        {
+            Container.BindIFactory<InGameBonusType, InGameTriggeredBonusBase>().FromSubContainerResolve().ByMethod(
+                (container, type) =>
+                {
+                    var car = container.InstantiatePrefabResource(_prefabPathConfig.GetBonusPathByBonusType(type)).GetComponent<InGameTriggeredBonusBase>();
+                    container.Bind<InGameTriggeredBonusBase>().FromInstance(car);
+                });
         }
 
     }
+
 }

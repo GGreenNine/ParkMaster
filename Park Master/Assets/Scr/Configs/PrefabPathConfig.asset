@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: PrefabPathConfig
   m_EditorClassIdentifier: 
   lineRendererPathBuilder: Prefabs/PathBuilder
+  bonusesPrefabPathes:
+  - _bonusType: 0
+    path: Bonuses/GoldCoins
   carPrefabPatheses:
   - _type: 1
-    carPath: Cars/CarGreen
-  blueCarPath: Cars/CarGreen
+    carPath: Cars/Car_2 Variant
+  - _type: 2
+    carPath: Cars/Car_3 Variant

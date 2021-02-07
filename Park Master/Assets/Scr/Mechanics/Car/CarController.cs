@@ -15,6 +15,8 @@ namespace Scr.Mechanics.Car
         private CarModel _carModel;
         private Sequence movingSequence;
         private IPathMover _pathMover;
+        
+        public CarType CarType => _carModel.CarType;
 
         [Inject]
         public void SetDependencies(IPathBuilder pathBuilder, IPathMover pathMover, CarModel carModel)

@@ -52,9 +52,11 @@ namespace Asteroids
 
         private void Start()
         {
-            var car = _carFactory.Create(CarType.Blue);
-            car.transform.position = new Vector3(0,0.02f, 0);
-            // StartCoroutine(Background_Game_Workflow());
+            // var car = _carFactory.Create(CarType.Blue);
+            // var car3 = _carFactory.Create(CarType.Yellow);
+            // car.transform.position = new Vector3(0,0.02f, 0);
+            // car3.transform.position = new Vector3(10,0.02f, 0);
+            // // StartCoroutine(Background_Game_Workflow());
         }
 
         /// <summary>
