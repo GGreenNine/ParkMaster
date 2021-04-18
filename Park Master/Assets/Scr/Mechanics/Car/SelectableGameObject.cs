@@ -5,7 +5,7 @@ using Zenject;
 
 namespace Scr.Mechanics.Car
 {
-    public abstract class SelectableGameObject : GameObjectBase
+    public abstract class SelectableGameObject : CollidingElementBase
     {
         protected IObjectSelector ObjectSelector;
         protected bool IsSelected = false;

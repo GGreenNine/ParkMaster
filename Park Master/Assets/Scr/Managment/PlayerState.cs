@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using Zenject;
 
-public class PlayerState : IInitializable
+public class PlayerState
 {
     public int CurrentLevel = 1;
 
@@ -18,15 +18,14 @@ public class PlayerState : IInitializable
         _levelLoadParser = levelLoadParser;
     }
     
-    public void Initialize()
-    {
-        _levelInfos = _levelLoadParser.Load();
-    }
-
     public LevelInfo CurrentLevelInfo
     {
         get
         {
+            if (_levelInfos == null)
+            {
+                _levelInfos = _levelLoadParser.Load();
+            }
             if (_levelInfos.Any(info => info.level == CurrentLevel))
             {
                 return _levelInfos.First(info => info.level == CurrentLevel);

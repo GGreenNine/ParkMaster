@@ -35,8 +35,8 @@ public class LeveInfoSceneParser : MonoBehaviour
         {
             if (bonus != null)
             {
-                _inGameBonusList.Add(new InGameBonusInfo(bonus.InGameBonusType, bonus.transform.position,
-                    bonus.transform.rotation));
+                // _inGameBonusList.Add(new InGameBonusInfo(bonus.InGameBonusType, bonus.transform.position,
+                    // bonus.transform.rotation, ));
             }
         }
 

@@ -54,9 +54,9 @@ namespace Scr.Input
 
         public void Dispose()
         {
-            leftClicked.OnCompleted();
-            leftClicked.Dispose();
-            leftHolded.Dispose();
+            leftClicked?.OnCompleted();
+            leftClicked?.Dispose();
+            leftHolded?.Dispose();
         }
     }
 }

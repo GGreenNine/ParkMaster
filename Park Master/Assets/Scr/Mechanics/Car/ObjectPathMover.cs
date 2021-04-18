@@ -1,5 +1,6 @@
 using System;
 using DG.Tweening;
+using Managment;
 using Scr.Extensions;
 using UniRx;
 using UnityEngine;
@@ -8,15 +9,28 @@ namespace Scr.Mechanics.Car
 {
     public interface IPathMover : IDisposable
     {
-        void Move(Vector3[] path, float speed, Transform transform, ObjectMoveStrategy objectMoveStrategy, ObjectRotateStrategy objectRotateStrategy);
+        IDisposable Move(Vector3[] path, float speed, Transform transform, ObjectMoveStrategy objectMoveStrategy, ObjectRotateStrategy objectRotateStrategy, Action onPathComplete = null);
         void StopMoving();
     }
 
     public class ObjectPathMover : IPathMover
     {
         private readonly SerialDisposable moveDisposable = new SerialDisposable();
-        
-        public void Move(Vector3[] path, float speed, Transform transform, ObjectMoveStrategy objectMoveStrategy, ObjectRotateStrategy objectRotateStrategy)
+        // private IGameStateHolder _gameStateHolder;
+        //
+        // public ObjectPathMover(IGameStateHolder gameStateHolder)
+        // {
+        //     _gameStateHolder = gameStateHolder;
+        //     _gameStateHolder.CurrentGameState.Subscribe(state =>
+        //     {
+        //         if (state == GameState.CarCrashState)
+        //         {
+        //             
+        //         }
+        //     })
+        // }
+
+        public IDisposable Move(Vector3[] path, float speed, Transform transform, ObjectMoveStrategy objectMoveStrategy, ObjectRotateStrategy objectRotateStrategy, Action onPathComplete = null)
         {
             int currentWaypoint = 0;
             moveDisposable.Disposable = Observable.EveryUpdate().Subscribe(l =>
@@ -31,11 +45,18 @@ namespace Scr.Mechanics.Car
                         currentWaypoint++;
                     }
                 }
-            }); 
+                else
+                {
+                    StopMoving();
+                    onPathComplete?.Invoke();
+                }
+            });
+            return moveDisposable.Disposable;
         }
 
         public void StopMoving()
         {
+            moveDisposable.Disposable?.Dispose();
         }
 
         public void Dispose()

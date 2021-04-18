@@ -13,7 +13,8 @@ namespace Scr.Mechanics.Bezier
     {
         None = 0,
         Blue = 1,
-        Yellow = 2
+        Yellow = 2,
+        Any = 3
     }
 
     public class BezierPointsCreator : IPointsCreator

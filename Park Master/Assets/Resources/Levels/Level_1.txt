@@ -1,1 +1,105 @@
-{"level":1,"InGameBonusList":[{"InGameBonusType":"Coin","position":{"x":0.791,"y":-0.006484,"z":0.309,"normalized":{"x":0.931423962,"y":-0.007635086,"z":0.363855869,"magnitude":1.0,"sqrMagnitude":1.0},"magnitude":0.8492373,"sqrMagnitude":0.721204042},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0,"eulerAngles":{"x":0.0,"y":0.0,"z":0.0,"magnitude":0.0,"sqrMagnitude":0.0}}},{"InGameBonusType":"Coin","position":{"x":0.152,"y":-0.006484,"z":0.591,"normalized":{"x":0.249070868,"y":-0.010624839,"z":0.968426943,"normalized":{"x":0.249070883,"y":-0.01062484,"z":0.968427,"magnitude":1.0,"sqrMagnitude":1.0},"magnitude":0.99999994,"sqrMagnitude":0.99999994},"magnitude":0.610268056,"sqrMagnitude":0.372427076},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0,"eulerAngles":{"x":0.0,"y":0.0,"z":0.0,"magnitude":0.0,"sqrMagnitude":0.0}}},{"InGameBonusType":"Coin","position":{"x":-0.553,"y":-0.006484,"z":0.487,"normalized":{"x":-0.750442147,"y":-0.008799036,"z":0.660877645,"magnitude":1.0,"sqrMagnitude":1.00000012},"magnitude":0.7368989,"sqrMagnitude":0.54302},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0,"eulerAngles":{"x":0.0,"y":0.0,"z":0.0,"magnitude":0.0,"sqrMagnitude":0.0}}},{"InGameBonusType":"Coin","position":{"x":-0.873,"y":-0.006484,"z":0.153,"normalized":{"x":-0.984961033,"y":-0.0073155635,"z":0.172622025,"magnitude":1.0,"sqrMagnitude":1.00000012},"magnitude":0.886329532,"sqrMagnitude":0.7855801},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0,"eulerAngles":{"x":0.0,"y":0.0,"z":0.0,"magnitude":0.0,"sqrMagnitude":0.0}}}],"Cars":null}
+{
+  "level": 1,
+  "InGameBonusList": [
+    {
+      "InGameBonusType": "Coin",
+      "canCollectedBy": 2,
+      "position": {
+        "x": -0.993,
+        "y": 0.008,
+        "z": 0.403
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1,
+        "eulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "InGameBonusType": "Coin",
+      "canCollectedBy": 1,
+      "position": {
+        "x": 0.912,
+        "y": 0.037,
+        "z": 0.371
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1,
+        "eulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "InGameBonusType": "Key",
+       "canCollectedBy": 3,
+      "position": {
+        "x": 0.05,
+        "y": 0.045,
+        "z": 0.532
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1,
+        "eulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    }
+  ],
+  "Cars": [
+    {
+      "CarType": "Yellow",
+      "position": {
+        "x": -0.984,
+        "y": 0.02,
+        "z": -0.301
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1,
+        "eulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+         {
+           "CarType": "Blue",
+           "position": {
+             "x": 0.915,
+             "y": 0.02,
+             "z": -0.301
+           },
+           "rotation": {
+             "x": 0,
+             "y": 0,
+             "z": 0,
+             "w": 1,
+             "eulerAngles": {
+               "x": 0,
+               "y": 0,
+               "z": 0
+             }
+           }
+         }
+  ]
+}

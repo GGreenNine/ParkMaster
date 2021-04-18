@@ -16,6 +16,8 @@ MonoBehaviour:
   bonusesPrefabPathes:
   - _bonusType: 0
     path: Bonuses/GoldCoins
+  - _bonusType: 1
+    path: Bonuses/BeveledStar
   carPrefabPatheses:
   - _type: 1
     carPath: Cars/Car_2 Variant

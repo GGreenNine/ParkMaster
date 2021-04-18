@@ -15,12 +15,12 @@ public interface ILevelLoader
 
 public class LevelLoader : IInitializable, ILevelLoader
 {
-    private PlayerState _playerState;
-    private IFactory<CarType, CarController> carFactory;
-    private IFactory<InGameBonusType, InGameTriggeredBonusBase> bonusFactory;
+    private readonly PlayerState _playerState;
+    private readonly IFactory<CarModel, CarController> carFactory;
+    private readonly IFactory<InGameBonusType, InGameTriggeredBonusBase> bonusFactory;
 
 
-    public LevelLoader(PlayerState playerState, IFactory<CarType, CarController> carFactory, IFactory<InGameBonusType, InGameTriggeredBonusBase> bonusFactory)
+    public LevelLoader(PlayerState playerState, IFactory<CarModel, CarController> carFactory, IFactory<InGameBonusType, InGameTriggeredBonusBase> bonusFactory)
     {
         _playerState = playerState;
         this.carFactory = carFactory;
@@ -58,15 +58,12 @@ public class LevelLoader : IInitializable, ILevelLoader
 
     private void LoadCar(CarInfo carInfo)
     {
-       var car = carFactory.Create(carInfo.CarType).transform;
-       car.position = carInfo.position;
-       car.rotation = carInfo.rotation;
+       carFactory.Create(new CarModel(carInfo.CarType, 15, carInfo.rotation, carInfo.position));
     }
 
     private void LoadBonus(InGameBonusInfo inGameBonusInfo)
     {
-        var bonus = bonusFactory.Create(inGameBonusInfo.InGameBonusType).transform;
-        bonus.position = inGameBonusInfo.position;
-        bonus.rotation = inGameBonusInfo.rotation;
+        var bonus = bonusFactory.Create(inGameBonusInfo.InGameBonusType);
+        bonus.SetOptions(inGameBonusInfo);
     }
 }

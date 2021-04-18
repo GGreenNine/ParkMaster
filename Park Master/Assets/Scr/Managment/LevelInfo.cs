@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Scr.Mechanics;
@@ -14,12 +15,14 @@ public class InGameBonusInfo
     public readonly InGameBonusType InGameBonusType;
     public readonly Vector3 position;
     public readonly Quaternion rotation;
+    public readonly CarType canCollectedBy;
 
-    public InGameBonusInfo(InGameBonusType inGameBonusType, Vector3 position, Quaternion rotation)
+    public InGameBonusInfo(InGameBonusType inGameBonusType, Vector3 position, Quaternion rotation, CarType canCollectedBy)
     {
         InGameBonusType = inGameBonusType;
         this.position = position;
         this.rotation = rotation;
+        this.canCollectedBy = canCollectedBy;
     }
 }
 
@@ -51,5 +54,11 @@ public class LevelInfo
         this.level = level;
         InGameBonusList = inGameBonusList;
         Cars = cars;
+    }
+
+    public int GetBonusesCount(InGameBonusType bonusType)
+    {
+        var bonusCount = InGameBonusList.Count(info => info.InGameBonusType == bonusType);
+        return bonusCount;
     }
 }

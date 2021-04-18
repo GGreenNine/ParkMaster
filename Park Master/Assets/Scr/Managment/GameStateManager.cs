@@ -12,14 +12,7 @@ namespace Asteroids
 {
     public class GameStateManager : MonoBehaviour
     {
-        private IFactory<CarType, CarController> _carFactory;
-        
-        [Inject]
-        private void SetDependencies(IFactory<CarType, CarController> carFactory)
-        {
-            _carFactory = carFactory;
-        }
-        
+
         public enum GameState
         {
             Pause,
@@ -48,15 +41,6 @@ namespace Asteroids
             }
 
             CurrentGameState = state;
-        }
-
-        private void Start()
-        {
-            // var car = _carFactory.Create(CarType.Blue);
-            // var car3 = _carFactory.Create(CarType.Yellow);
-            // car.transform.position = new Vector3(0,0.02f, 0);
-            // car3.transform.position = new Vector3(10,0.02f, 0);
-            // // StartCoroutine(Background_Game_Workflow());
         }
 
         /// <summary>

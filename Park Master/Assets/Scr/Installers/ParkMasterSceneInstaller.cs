@@ -1,4 +1,5 @@
 ﻿using System;
+using Managment;
 using Scr.Configs;
 using Scr.Input;
 using Scr.Mechanics;
@@ -25,10 +26,13 @@ namespace Scr.Installers
             Container.BindInterfacesTo<BezierPointsCreator>().AsSingle().Lazy();
 
             Container.BindInterfacesAndSelfTo<InGameBonusCollector>().AsSingle();
+            Container.BindInterfacesTo<InGamePathCollector>().AsSingle();
+            Container.BindInterfacesTo<InGameCarMovesCollector>().AsSingle();
 
             Container.BindInterfacesAndSelfTo<Input.InputMaster>().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<ObjectSelector>().AsSingle().NonLazy();
             Container.BindInterfacesTo<RaycastingSystem>().AsSingle();
+            Container.BindInterfacesAndSelfTo<GameStateHolder>().AsSingle();
 
             Container.Bind<Camera>().FromInstance(raycastCamera).WhenInjectedInto<IRaycastingSystem>();
             Container.BindInterfacesTo<LevelLoader>().AsSingle();
@@ -43,15 +47,14 @@ namespace Scr.Installers
         {
             Container.BindInterfacesTo<ObjectPathMover>().AsTransient();
 
-            Container.BindIFactory<CarType, CarController>().FromSubContainerResolve().ByMethod(
-                    (container, type) =>
+            Container.BindIFactory<CarModel, CarController>().FromSubContainerResolve().ByMethod(
+                    (container, model) =>
                     {
-                        var carModel = new CarModel(type, 15);
-                        container.Bind<CarModel>().FromInstance(carModel).AsSingle();
+                        container.Bind<CarModel>().FromInstance(model).AsSingle();
                         container.BindInterfacesTo<ObjectPathMover>().AsSingle();
                         container.BindInterfacesAndSelfTo<LineRendererPathBuilder>()
                                 .FromComponentInNewPrefabResource(_prefabPathConfig.lineRendererPathBuilder).AsSingle();
-                        var car = container.InstantiatePrefabResource(_prefabPathConfig.GetCarPathByCarType(type)).GetComponent<CarController>();
+                        var car = container.InstantiatePrefabResource(_prefabPathConfig.GetCarPathByCarType(model.CarType)).GetComponent<CarController>();
                         container.Bind<CarController>().FromInstance(car);
                     });
         }

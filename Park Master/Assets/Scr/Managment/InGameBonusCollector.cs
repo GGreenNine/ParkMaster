@@ -5,28 +5,110 @@ using Scr.Mechanics;
 using UniRx;
 using UnityEngine;
 
-public interface IInGameBonusCollector
+public interface IInGameCollector<T>
+{
+    void Collect(T item);
+}
+
+public interface IInGamePathCollector : IInGameCollector<int>, GameStateExecutor
+{
+    void CarCrash();
+}
+
+public interface IInGameCarMovesCollector : IInGameCollector<int>, GameStateExecutor{}
+
+public interface IInGameBonusCollector : IInGameCollector<InGameBonusType>, GameStateExecutor
 {
     IObservable<int> CoinsCollected { get; }
     IObservable<int> KeysCollected { get; }
-    void Collect(InGameBonusType bonusType);
+}
+
+public interface GameStateExecutor //todo naming
+{
+    IReadOnlyReactiveProperty<bool> Triggered { get; }
+}
+
+public class InGameCarMovesCollector : IInGameCarMovesCollector
+{
+    public IReadOnlyReactiveProperty<bool> Triggered => _trigger;
+    private readonly ReactiveProperty<bool> _trigger = new ReactiveProperty<bool>(false);
+
+    private int MovedCarsCount;
+    private readonly PlayerState _playerState;
+
+    public InGameCarMovesCollector(PlayerState playerState)
+    {
+        _playerState = playerState;
+    }
+    
+    public void Collect(int item)
+    {
+        if (MovedCarsCount >= _playerState.CurrentLevelInfo.Cars.Count)
+        {
+            _trigger.Value = true;
+        }
+        
+        MovedCarsCount++;
+    }
+}
+
+public class InGamePathCollector :  IInGamePathCollector
+{
+    public IReadOnlyReactiveProperty<bool> Triggered => _trigger;
+    private readonly ReactiveProperty<bool> _trigger = new ReactiveProperty<bool>(false);
+
+    private int _pathCreated;
+    private readonly PlayerState _playerState;
+    
+    public InGamePathCollector(PlayerState playerState)
+    {
+        _playerState = playerState;
+    }
+
+    public void CarCrash() // maybe move to another collector
+    {
+        _trigger.Value = false;
+    }
+    
+    public void Collect(int item)
+    {
+        _pathCreated++;
+        if (_pathCreated >= _playerState.CurrentLevelInfo.Cars.Count)
+        {
+            _trigger.Value = true;
+        }
+    }
 }
 
 public class InGameBonusCollector : IDisposable, IInGameBonusCollector
 {
-    private Dictionary<InGameBonusType, ReactiveProperty<int>> _inGameBonusesDictionary =
+    public IReadOnlyReactiveProperty<bool> Triggered => _trigger;
+    private readonly ReactiveProperty<bool> _trigger = new ReactiveProperty<bool>(false);
+
+    private CompositeDisposable _compositeDisposable = new CompositeDisposable();
+
+    private readonly Dictionary<InGameBonusType, ReactiveProperty<int>> _inGameBonusesDictionary =
         new Dictionary<InGameBonusType, ReactiveProperty<int>>();
 
     public IObservable<int> CoinsCollected => _coinsCollected;
     public IObservable<int> KeysCollected => _keysCollected;
 
+
     private readonly ReactiveProperty<int> _coinsCollected = new ReactiveProperty<int>();
     private readonly ReactiveProperty<int> _keysCollected = new ReactiveProperty<int>();
 
-    public InGameBonusCollector()
+    public InGameBonusCollector(PlayerState playerState)
     {
         _inGameBonusesDictionary.Add(InGameBonusType.Coin, _coinsCollected);
         _inGameBonusesDictionary.Add(InGameBonusType.Key, _keysCollected);
+        _coinsCollected.AddTo(_compositeDisposable);
+        _keysCollected.AddTo(_compositeDisposable);
+        _trigger.AddTo(_compositeDisposable);
+        
+        _keysCollected.Skip(1).Subscribe(i =>
+        {
+            _trigger.Value = playerState.CurrentLevelInfo.GetBonusesCount(InGameBonusType.Key) >= i;
+        }).AddTo(_compositeDisposable);
     }
 
     public void Collect(InGameBonusType bonusType)
@@ -36,7 +118,7 @@ public class InGameBonusCollector : IDisposable, IInGameBonusCollector
 
     public void Dispose()
     {
-        _coinsCollected?.Dispose();
-        _keysCollected?.Dispose();
+        _compositeDisposable?.Dispose();
     }
+
 }
