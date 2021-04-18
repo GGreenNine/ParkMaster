@@ -10,12 +10,17 @@ public interface IInGameCollector<T>
     void Collect(T item);
 }
 
-public interface IInGamePathCollector : IInGameCollector<int>, GameStateExecutor
+public interface IInGameCollector
+{
+    void Collect();
+}
+
+public interface IInGamePathCollector : IInGameCollector, GameStateExecutor
 {
     void CarCrash();
 }
 
-public interface IInGameCarMovesCollector : IInGameCollector<int>, GameStateExecutor{}
+public interface IInGameCarMovesCollector : IInGameCollector, GameStateExecutor{}
 
 public interface IInGameBonusCollector : IInGameCollector<InGameBonusType>, GameStateExecutor
 {
@@ -41,14 +46,14 @@ public class InGameCarMovesCollector : IInGameCarMovesCollector
         _playerState = playerState;
     }
     
-    public void Collect(int item)
+    public void Collect()
     {
+        MovedCarsCount++;
+
         if (MovedCarsCount >= _playerState.CurrentLevelInfo.Cars.Count)
         {
             _trigger.Value = true;
         }
-        
-        MovedCarsCount++;
     }
 }
 
@@ -70,7 +75,7 @@ public class InGamePathCollector :  IInGamePathCollector
         _trigger.Value = false;
     }
     
-    public void Collect(int item)
+    public void Collect()
     {
         _pathCreated++;
         if (_pathCreated >= _playerState.CurrentLevelInfo.Cars.Count)

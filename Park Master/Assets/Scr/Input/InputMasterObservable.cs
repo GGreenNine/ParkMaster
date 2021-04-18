@@ -25,6 +25,8 @@ namespace Scr.Input
         public IReactiveProperty<bool> LeftHolded => leftHolded;
         public IObservable<Unit> LeftClicked => leftClicked;
 
+        private CompositeDisposable _compositeDisposable = new CompositeDisposable();
+
 
         public void Initialize()
         {
@@ -34,26 +36,32 @@ namespace Scr.Input
         private void InitializeInputs()
         {
             _inputActions.Enable();
-            _inputActions.GameControl.LeftHold.performed += context =>
-            {
-                leftHolded.Value = true;
-            };
-            _inputActions.GameControl.LeftHold.started += context =>
-            {
-            };
-            _inputActions.GameControl.LeftHold.canceled += context =>
+            
+            Observable.FromEvent<InputAction.CallbackContext>(actions => _inputActions.GameControl.LeftHold.performed += actions,
+                action => _inputActions.GameControl.LeftHold.performed -= action).Subscribe(context =>
+                {
+                    leftHolded.Value = true;
+                }).AddTo(_compositeDisposable);
+            
+            Observable.FromEvent<InputAction.CallbackContext>(actions => _inputActions.GameControl.LeftHold.canceled += actions,
+                action => _inputActions.GameControl.LeftHold.performed -= action).Subscribe(context =>
             {
                 leftHolded.Value = false;
-            };
-        
-            _inputActions.GameControl.LeftClick.performed += context =>
+            }).AddTo(_compositeDisposable);
+            
+            Observable.FromEvent<InputAction.CallbackContext>(actions => _inputActions.GameControl.LeftClick.performed += actions,
+                action => _inputActions.GameControl.LeftHold.performed -= action).Subscribe(context =>
             {
                 leftClicked.OnNext(Unit.Default);
-            };
+            }).AddTo(_compositeDisposable);
         }
+
+
 
         public void Dispose()
         {
+            _inputActions.Dispose();
+            _compositeDisposable?.Dispose();
             leftClicked?.OnCompleted();
             leftClicked?.Dispose();
             leftHolded?.Dispose();

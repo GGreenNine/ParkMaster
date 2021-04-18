@@ -42,7 +42,7 @@ namespace Scr.Mechanics
         protected override void OnTriggered(Collider other)
         {
             var carController = other.GetComponent<CarController>();
-            if (carController != null && (carController.CarType == _canCollectedBy || _canCollectedBy == CarType.Any) && _gameStateHolder.CurrentGameState.Value == GameState.PathExecutionState)
+            if (carController != null && (carController.CarType == _canCollectedBy || _canCollectedBy == CarType.Any) && _gameStateHolder.CurrentGameState.Value != GameState.PathRememberingState)
             {
                 BonusCollector.Collect(inGameBonusType);
                 gameObject.SetActive(false);

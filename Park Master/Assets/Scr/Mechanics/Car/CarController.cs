@@ -25,7 +25,8 @@ namespace Scr.Mechanics.Car
 
         public CarType CarType => _carModel.CarType;
 
-        private bool collected = false;
+        private bool pathCollected = false;
+        private bool movesCollected = false;
         private IEnumerable<Vector3> lastPath;
 
         [Inject]
@@ -53,11 +54,6 @@ namespace Scr.Mechanics.Car
             base.Awake();
             ResetPosition();
 
-            if (_pathBuilder is LineRendererPathBuilder rendererPathBuilder)
-            {
-                rendererPathBuilder.transform.localPosition = new Vector3(-0.02f, -2.53f, 0);
-            }
-
             _gameStateHolder.CurrentGameState.Subscribe(OnStateChanged).AddTo(OnDestroyDisposable);
         }
 
@@ -73,38 +69,43 @@ namespace Scr.Mechanics.Car
         {
             transform.position = _carModel.InitialPos;
             transform.rotation = _carModel.InitialRotation;
+            
+            if (_pathBuilder is LineRendererPathBuilder rendererPathBuilder)
+            {
+                rendererPathBuilder.transform.localPosition = new Vector3(-0.02f, -2.53f, 0);
+            }
         }
 
         protected override void OnDeselect()
         {
             base.OnDeselect();
             lastPath = _pathBuilder.StopBuilding(_carModel.CarType);
-            Action OnCompliteAction = null;
 
-            if (!collected)
+            if (!pathCollected)
             {
-                _inGamePathCollector.Collect(1);
-                collected = true;
+                _inGamePathCollector.Collect();
+                pathCollected = true;
             }
             
-            if (_gameStateHolder.CurrentGameState.Value == GameState.PathRememberingState)
-            {
-                OnCompliteAction = () =>
-                {
-                    ResetPosition();
-                    if (!collected)
-                    {
-                        _carMovesCollector.Collect(1);
-                    }
-                };
-            }
-            
-            Move(lastPath, OnCompliteAction);
+            Move(lastPath);
         }
 
-        private void Move(IEnumerable<Vector3> path, Action onCompliteAction = null)
+        private void Move(IEnumerable<Vector3> path)
         {
-            _pathMover.Move(path.ToArray(), _carModel.CarSpeed, transform, new ObjectMoveByXZStrategy(), new ObjectRotateByXZLerp(), onCompliteAction);
+            _pathMover.Move(path.ToArray(), _carModel.CarSpeed, transform, new ObjectMoveByXZStrategy(), new ObjectRotateByXZLerp()).Subscribe(OnPathComplite).AddTo(OnDestroyDisposable);
+        }
+
+        private void OnPathComplite(Unit obj)
+        {
+            switch (_gameStateHolder.CurrentGameState.Value)
+            {
+                case GameState.PathRememberingState:
+                    ResetPosition();
+                    break;
+                case GameState.PathExecutionState:
+                    _carMovesCollector.Collect();
+                    break;
+            }
         }
 
         protected override void OnDestroy()

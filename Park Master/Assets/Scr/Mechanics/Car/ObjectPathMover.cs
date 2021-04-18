@@ -9,49 +9,41 @@ namespace Scr.Mechanics.Car
 {
     public interface IPathMover : IDisposable
     {
-        IDisposable Move(Vector3[] path, float speed, Transform transform, ObjectMoveStrategy objectMoveStrategy, ObjectRotateStrategy objectRotateStrategy, Action onPathComplete = null);
+        IObservable<Unit> Move(Vector3[] path, float speed, Transform transform, ObjectMoveStrategy objectMoveStrategy, ObjectRotateStrategy objectRotateStrategy);
         void StopMoving();
     }
 
     public class ObjectPathMover : IPathMover
     {
         private readonly SerialDisposable moveDisposable = new SerialDisposable();
-        // private IGameStateHolder _gameStateHolder;
-        //
-        // public ObjectPathMover(IGameStateHolder gameStateHolder)
-        // {
-        //     _gameStateHolder = gameStateHolder;
-        //     _gameStateHolder.CurrentGameState.Subscribe(state =>
-        //     {
-        //         if (state == GameState.CarCrashState)
-        //         {
-        //             
-        //         }
-        //     })
-        // }
 
-        public IDisposable Move(Vector3[] path, float speed, Transform transform, ObjectMoveStrategy objectMoveStrategy, ObjectRotateStrategy objectRotateStrategy, Action onPathComplete = null)
+        public IObservable<Unit> Move(Vector3[] path, float speed, Transform transform, ObjectMoveStrategy objectMoveStrategy, ObjectRotateStrategy objectRotateStrategy)
         {
             int currentWaypoint = 0;
-            moveDisposable.Disposable = Observable.EveryUpdate().Subscribe(l =>
-            {
-                if (currentWaypoint < path.Length)
+
+            return Observable.Create<Unit>(observer =>
+            { 
+                moveDisposable.Disposable = Observable.EveryUpdate().Subscribe(l =>
                 {
-                    objectRotateStrategy.Rotate(transform, path[currentWaypoint], speed);
-                    objectMoveStrategy.Move(transform, path[currentWaypoint], speed);
-                    
-                    if (transform.position.AlmostEqual(path[currentWaypoint], 0.01f))
+                    if (currentWaypoint < path.Length)
                     {
-                        currentWaypoint++;
+                        objectRotateStrategy.Rotate(transform, path[currentWaypoint], speed);
+                        objectMoveStrategy.Move(transform, path[currentWaypoint], speed);
+                    
+                        if (transform.position.AlmostEqual(path[currentWaypoint], 0.01f))
+                        {
+                            currentWaypoint++;
+                        }
                     }
-                }
-                else
-                {
-                    StopMoving();
-                    onPathComplete?.Invoke();
-                }
+                    else
+                    {
+                        StopMoving();
+                        observer.OnNext(Unit.Default);
+                    }
+                });
+                return Disposable.Empty;
             });
-            return moveDisposable.Disposable;
+            
         }
 
         public void StopMoving()
