@@ -867,9 +867,6 @@
           <e p="Extensions" t="Include">
             <e p="UnityExtensions.cs" t="Include" />
           </e>
-          <e p="Factories" t="Include">
-            <e p="CarFactory.cs" t="Include" />
-          </e>
           <e p="Input" t="Include">
             <e p="InputActions.cs" t="Include" />
             <e p="InputMasterObservable.cs" t="Include" />
@@ -889,7 +886,6 @@
             <e p="LevelInfo.cs" t="Include" />
             <e p="LevelLoader.cs" t="Include" />
             <e p="LevelLoadParser.cs" t="Include" />
-            <e p="PauseMenuPresenter.cs" t="Include" />
             <e p="PlayerState.cs" t="Include" />
           </e>
           <e p="Mechanics" t="Include">

@@ -15,7 +15,6 @@ namespace Scr.Mechanics.Car
     {
         private IPathBuilder _pathBuilder;
         private CarModel _carModel;
-        private Sequence movingSequence;
         private IPathMover _pathMover;
         private IGameStateHolder _gameStateHolder;
         private IInGamePathCollector _inGamePathCollector;
@@ -25,8 +24,7 @@ namespace Scr.Mechanics.Car
 
         public CarType CarType => _carModel.CarType;
 
-        private bool pathCollected = false;
-        private bool movesCollected = false;
+        private bool pathCollected;
         private IEnumerable<Vector3> lastPath;
 
         [Inject]
