@@ -44,178 +44,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6de7fee0-8de1-4041-80fe-dd3a154efa5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Hand Painted Seamless Tiles Texture.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Hand Painted Seamless Tiles Texture/Demo.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Hand Painted Seamless Tiles Texture/Demo/Scenes.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Hand Painted Seamless Tiles Texture/Demo/Scenes/Demo.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Hand Painted Seamless Tiles Texture/Demo/Scenes/Demo.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Hand Painted Seamless Tiles Texture/Documentation.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Hand Painted Seamless Tiles Texture/Documentation/Documentation.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Hand Painted Seamless Tiles Texture/Documentation/Documentation.txt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Hand Painted Seamless Tiles Texture/Materials.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Hand Painted Seamless Tiles Texture/Materials/M_Tiles1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Hand Painted Seamless Tiles Texture/Materials/M_Tiles1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Hand Painted Seamless Tiles Texture/Materials/M_Tiles2.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Hand Painted Seamless Tiles Texture/Materials/M_Tiles2.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Hand Painted Seamless Tiles Texture/Materials/M_Tiles3.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Hand Painted Seamless Tiles Texture/Materials/M_Tiles3.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Hand Painted Seamless Tiles Texture/Materials/Tiles3.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Hand Painted Seamless Tiles Texture/Materials/Tiles3.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Hand Painted Seamless Tiles Texture/Textures.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Hand Painted Seamless Tiles Texture/Textures/Tiles1.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Hand Painted Seamless Tiles Texture/Textures/Tiles1.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Hand Painted Seamless Tiles Texture/Textures/Tiles2.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Hand Painted Seamless Tiles Texture/Textures/Tiles2.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Hand Painted Seamless Tiles Texture/Textures/Tiles3.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Hand Painted Seamless Tiles Texture/Textures/Tiles3.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/HandPainted Ground Textures.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/HandPainted Ground Textures/Demo.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/HandPainted Ground Textures/Demo/Scene.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/HandPainted Ground Textures/Demo/Scene/Demo.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/HandPainted Ground Textures/Demo/Scene/Demo.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/HandPainted Ground Textures/Documentation.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/HandPainted Ground Textures/Documentation/Documentation.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/HandPainted Ground Textures/Documentation/Documentation.txt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/HandPainted Ground Textures/Materials.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/HandPainted Ground Textures/Materials/Albedo_GrassFlower.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/HandPainted Ground Textures/Materials/Albedo_GrassFlower.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/HandPainted Ground Textures/Materials/Albedo_GrassStone.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/HandPainted Ground Textures/Materials/Albedo_GrassStone.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/HandPainted Ground Textures/Materials/M_GrassFlower.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/HandPainted Ground Textures/Materials/M_GrassFlower.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/HandPainted Ground Textures/Materials/M_GrassStone.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/HandPainted Ground Textures/Materials/M_GrassStone.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/HandPainted Ground Textures/Textures.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/HandPainted Ground Textures/Textures/Albedo_GrassFlower.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/HandPainted Ground Textures/Textures/Albedo_GrassFlower.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/HandPainted Ground Textures/Textures/Albedo_GrassStone.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/HandPainted Ground Textures/Textures/Albedo_GrassStone.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Cars/Car_2 Variant.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Cars/Car_2 Variant.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Cars/Car_3 Variant.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Cars/Car_3 Variant.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scr/Mechanics/CoinBonus.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scr/Mechanics/CoinBonus.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scr/Mechanics/CollidingElementBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scr/Mechanics/CollidingElementBase.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scr/Mechanics/KeyBonus.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scr/Mechanics/KeyBonus.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Materials.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Materials/Bus_1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Materials/Bus_1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Materials/Bus_2.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Materials/Bus_2.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Materials/Cars_1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Materials/Cars_1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Materials/Cars_2.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Materials/Cars_2.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Materials/Mobile.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Materials/Mobile/Bus_1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Materials/Mobile/Bus_1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Materials/Mobile/Bus_2.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Materials/Mobile/Bus_2.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Materials/Mobile/Cars_1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Materials/Mobile/Cars_1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Materials/Mobile/Cars_2.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Materials/Mobile/Cars_2.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Materials/Mobile/Road.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Materials/Mobile/Road.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Models.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Models/Materials.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Models/Materials/Material #23.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Models/Materials/Material #23.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Models/Materials/No Name.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Models/Materials/No Name.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Models/bus.FBX" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Models/bus.FBX.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Models/car_1.FBX" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Models/car_1.FBX.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Models/car_2.FBX" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Models/car_2.FBX.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Models/police_car.FBX" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Models/police_car.FBX.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Models/road_4.FBX" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Models/road_4.FBX.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Bus_1.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Bus_1.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Bus_2.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Bus_2.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Car_1.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Car_1.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Car_2.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Car_2.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Car_3.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Car_3.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Car_4.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Car_4.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Mobile.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Mobile/Bus_1.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Mobile/Bus_1.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Mobile/Bus_2.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Mobile/Bus_2.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Mobile/Car_1.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Mobile/Car_1.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Mobile/Car_2.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Mobile/Car_2.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Mobile/Car_3.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Mobile/Car_3.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Mobile/Car_4.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Mobile/Car_4.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Mobile/Police_car.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Mobile/Police_car.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Mobile/Taxi.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Mobile/Taxi.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Mobile/road_4.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Mobile/road_4.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Police_car.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Police_car.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Taxi.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Prefabs/Taxi.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/Mobile.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/Mobile/bus_2_diffuse.tif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/Mobile/bus_2_diffuse.tif.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/Mobile/bus_diffuse.tif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/Mobile/bus_diffuse.tif.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/Mobile/cars_2_diffuse.tif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/Mobile/cars_2_diffuse.tif.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/Mobile/cars_diffuse.tif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/Mobile/cars_diffuse.tif.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/Mobile/road_diffuse.tif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/Mobile/road_diffuse.tif.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/bus_AO.tif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/bus_AO.tif.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/bus_albedo.tif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/bus_albedo.tif.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/bus_albedo_2.tif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/bus_albedo_2.tif.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/bus_metallic.tif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/bus_metallic.tif.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/cars_AO.tif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/cars_AO.tif.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/cars_albedo.tif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/cars_albedo.tif.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/cars_albedo_2.tif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/cars_albedo_2.tif.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/cars_metallic.tif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Simple Vehicle Pack/Textures/cars_metallic.tif.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Park Master/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Park Master/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Park Master/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Park Master/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Park Master/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Park Master/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Park Master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Park Master/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Level_1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Level_1.txt.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ParkSimpleLevel_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ParkSimpleLevel_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scr/Configs/PrefabPathConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Configs/PrefabPathConfig.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scr/Configs/PrefabPathConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Configs/PrefabPathConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scr/Installers/ParkMasterSceneInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Installers/ParkMasterSceneInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scr/Installers/ProjectContextInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Installers/ProjectContextInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scr/Managment/GameStateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Managment/GameStateManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scr/Mechanics/Car/CarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Mechanics/Car/CarController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/Managment/LevelLoadParser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Managment/LevelLoadParser.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,27 +82,30 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scr/Managment/PlayerState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scr/Mechanics/Car/CarController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Mechanics/Bezier/CarPathControl.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scr/Mechanics/Bezier/LineRendererPathBuilder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scr/Mechanics/InGameTriggeredBonusBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scr/Managment/LevelLoader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scr/Input/ObjectSelector.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scr/Mechanics/Car/CarModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scr/Mechanics/Bezier/BezierPointsCreator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/40699C02-4E8B-4DCA-9ED0-CA044E229DCC/20/0e93abba/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scr/Installers/ParkMasterSceneInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scr/Configs/PrefabPathConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scr/Installers/ProjectContextInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scr/Configs/BezierSettingsConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scr/Managment/GameStateManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scr/Mechanics/Car/ObjectPathMover.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scr/Managment/LevelInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scr/Input/RaycastingSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../Tiny Tanks/Assets/Scripts/Game Basics/GameField.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scr/Managment/LeveInfoSceneParser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Mechanics/Car/CarModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Mechanics/Bezier/LineRendererPathBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Configs/PrefabPathConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../Tiny Tanks/Assets/Scripts/Game Basics/GameField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Managment/GameStateManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Mechanics/Car/CarController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/40699C02-4E8B-4DCA-9ED0-CA044E229DCC/20/0e93abba/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/UI/ScenePresenter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Configs/BezierSettingsConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Managment/GameStateSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Input/RaycastingSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Managment/LevelLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Managment/PlayerState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Mechanics/InGameTriggeredBonusBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Installers/ParkMasterSceneInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Installers/ProjectContextInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Mechanics/Bezier/BezierPointsCreator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Managment/LevelInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Input/ObjectSelector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scr/Mechanics/Car/ObjectPathMover.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -270,19 +113,30 @@
       <option value="$PROJECT_DIR$/Assets/Scr/Mechanics/InGameBunusBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scr/Mechanics/InGameTriggeredBunusBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scr/Managment/LeveInfoGenerator.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scr/Mechanics/Car/CarController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scr/Mechanics/KeyBonus.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scr/Managment/InGameBonusCollector.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scr/Mechanics/InGameTriggeredBonusBase.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scr/Managment/LevelLoadParser.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scr/Managment/LevelInfo.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scr/Managment/LeveInfoSceneParser.cs" />
       <option value="$PROJECT_DIR$/Assets/Scr/Configs/PrefabPathConfig.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scr/Installers/ParkMasterSceneInstaller.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scr/Managment/LevelLoader.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scr/Managment/GameStateManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scr/Installers/ProjectContextInstaller.cs" />
       <option value="$PROJECT_DIR$/Assets/Scr/Managment/PlayerState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Resources/UI/ScoreControl.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scr/Mechanics/Bezier/BezierPointsCreator.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scr/Mechanics/CoinBonus.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scr/Managment/LevelInfo.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scr/Managment/LeveInfoSceneParser.cs" />
+      <option value="$PROJECT_DIR$/Assets/Resources/Levels/Level_1.txt" />
+      <option value="$PROJECT_DIR$/Assets/Scr/Managment/GameStateSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scr/Installers/ParkMasterSceneInstaller.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scr/Managment/GameStateManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scr/Mechanics/Car/CarModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scr/Managment/LevelLoader.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scr/Mechanics/Car/SelectableGameObject.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scr/Mechanics/CollidingElementBase.cs" />
+      <option value="$PROJECT_DIR$/Assets/Resources/UI/ScenePresenter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scr/Managment/InGameBonusCollector.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scr/Mechanics/InGameTriggeredBonusBase.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scr/Mechanics/Car/CarController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scr/Mechanics/Car/ObjectPathMover.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scr/Input/InputMasterObservable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scr/Managment/LevelLoadParser.cs" />
     </changedPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -330,6 +184,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/builds\Park Master.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="B:\WorkProjects\ParkMaster\ParkMasterTestProject\Park Master\builds" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -339,10 +201,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="17452">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="11760">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="17452" />
+      <option name="pid" value="11760" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -372,6 +234,7 @@
       <workItem from="1610615542362" duration="2617000" />
       <workItem from="1610992255780" duration="3554000" />
       <workItem from="1612699746080" duration="12628000" />
+      <workItem from="1618765501198" duration="2453000" />
     </task>
     <servers />
   </component>
@@ -457,27 +320,27 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scr/Managment/LevelLoadParser.cs</url>
-          <line>47</line>
-          <properties documentPath="B:\WorkProjects\ParkMaster\ParkMasterTestProject\Park Master\Assets\Scr\Managment\LevelLoadParser.cs" initialLine="47" containingFunctionPresentation="method 'ProcessLevelFile'">
+          <url>file://$PROJECT_DIR$/Assets/Scr/Input/InputMasterObservable.cs</url>
+          <line>63</line>
+          <properties documentPath="B:\WorkProjects\ParkMaster\ParkMasterTestProject\Park Master\Assets\Scr\Input\InputMasterObservable.cs" initialLine="62" containingFunctionPresentation="method 'Dispose'">
             <startOffsets>
-              <option value="1392" />
+              <option value="2291" />
             </startOffsets>
             <endOffsets>
-              <option value="1459" />
+              <option value="2323" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scr/Managment/LevelLoader.cs</url>
-          <line>47</line>
-          <properties documentPath="B:\WorkProjects\ParkMaster\ParkMasterTestProject\Park Master\Assets\Scr\Managment\LevelLoader.cs" initialLine="47" containingFunctionPresentation="method 'LoadLevel'">
+          <url>file://$PROJECT_DIR$/Assets/Scr/Managment/LevelLoadParser.cs</url>
+          <line>22</line>
+          <properties documentPath="B:\WorkProjects\ParkMaster\ParkMasterTestProject\Park Master\Assets\Scr\Managment\LevelLoadParser.cs" initialLine="38" containingFunctionPresentation="method 'Load'">
             <startOffsets>
-              <option value="1181" />
+              <option value="467" />
             </startOffsets>
             <endOffsets>
-              <option value="1216" />
+              <option value="522" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="11" />

@@ -20,23 +20,7 @@ public class LevelLoadParser : JsonDataLoader<List<LevelInfo>>
 {
     public override List<LevelInfo> Load()
     {
-        var inGameBonuses = new List<InGameBonusInfo>()
-        {
-            new InGameBonusInfo(InGameBonusType.Coin, Vector3.one, Quaternion.identity, CarType.Blue),
-            new InGameBonusInfo(InGameBonusType.Coin, Vector3.one, Quaternion.identity, CarType.Yellow),
-            new InGameBonusInfo(InGameBonusType.Key, Vector3.one, Quaternion.identity, CarType.Any)
-        };
-        var cars = new List<CarInfo>()
-        {
-            new CarInfo(CarType.Blue, Vector3.one, Quaternion.identity)
-        };
-        var levelInfoTest = new LevelInfo(1, inGameBonuses, cars);
-        var json = JsonConvert.SerializeObject(levelInfoTest, Formatting.None, new JsonSerializerSettings 
-        { 
-            ReferenceLoopHandling = ReferenceLoopHandling.Ignore
-        });
-
-        var path = $"{Application.dataPath}/Resources/Levels";
+        var path = $"{Application.streamingAssetsPath}/Levels";
         
         if (Directory.Exists(path))
         {

@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ParkSimpleLevel_1.unity
+    guid: 97ed0c7cee608774580b3b673518c600
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: c01023df713820d4da125aa2ac32620e,
       type: 2}
