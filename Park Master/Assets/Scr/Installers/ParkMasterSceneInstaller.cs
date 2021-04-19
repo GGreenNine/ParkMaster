@@ -32,7 +32,7 @@ namespace Scr.Installers
             Container.BindInterfacesAndSelfTo<Input.InputMaster>().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<ObjectSelector>().AsSingle().NonLazy();
             Container.BindInterfacesTo<RaycastingSystem>().AsSingle();
-            Container.BindInterfacesAndSelfTo<GameStateHolder>().AsSingle();
+            Container.BindInterfacesAndSelfTo<GameStateSystem>().AsSingle();
 
             Container.Bind<Camera>().FromInstance(raycastCamera).WhenInjectedInto<IRaycastingSystem>();
             Container.BindInterfacesTo<LevelLoader>().AsSingle();

@@ -21,7 +21,7 @@ namespace Managment
         IReadOnlyReactiveProperty<GameState> CurrentGameState { get; }
     }
 
-    public class GameStateHolder : IInitializable, IDisposable, IGameStateHolder
+    public class GameStateSystem : IInitializable, IDisposable, IGameStateHolder
     {
         public IReadOnlyReactiveProperty<GameState> CurrentGameState => _currentGameState;
         private readonly ReactiveProperty<GameState> _currentGameState = new ReactiveProperty<GameState>(GameState.PathRememberingState);
@@ -32,7 +32,7 @@ namespace Managment
         private readonly IInGamePathCollector _inGamePathCollector;
         private readonly IInGameCarMovesCollector _inGameCarMovesCollector;
 
-        public GameStateHolder(IInGameBonusCollector inGameBonusCollector, IInGamePathCollector inGamePathCollector, IInGameCarMovesCollector inGameCarMovesCollector)
+        public GameStateSystem(IInGameBonusCollector inGameBonusCollector, IInGamePathCollector inGamePathCollector, IInGameCarMovesCollector inGameCarMovesCollector)
         {
             _inGameBonusCollector = inGameBonusCollector;
             _inGamePathCollector = inGamePathCollector;

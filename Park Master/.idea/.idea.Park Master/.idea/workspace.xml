@@ -45,10 +45,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6de7fee0-8de1-4041-80fe-dd3a154efa5d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Park Master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Park Master/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scr/Factories.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scr/Factories/CarFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scr/Factories/CarFactory.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scr/Mechanics/Car/CarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Mechanics/Car/CarController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/Installers/ParkMasterSceneInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Installers/ParkMasterSceneInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scr/Managment/GameStateSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scr/Managment/GameStateSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +114,6 @@
       <option value="$PROJECT_DIR$/Assets/Scr/Managment/LevelInfo.cs" />
       <option value="$PROJECT_DIR$/Assets/Scr/Managment/LeveInfoSceneParser.cs" />
       <option value="$PROJECT_DIR$/Assets/Resources/Levels/Level_1.txt" />
-      <option value="$PROJECT_DIR$/Assets/Scr/Managment/GameStateSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scr/Installers/ParkMasterSceneInstaller.cs" />
       <option value="$PROJECT_DIR$/Assets/Scr/Managment/GameStateManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scr/Mechanics/Car/CarModel.cs" />
@@ -130,6 +127,7 @@
       <option value="$PROJECT_DIR$/Assets/Scr/Input/InputMasterObservable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scr/Managment/LevelLoadParser.cs" />
       <option value="$PROJECT_DIR$/Assets/Scr/Mechanics/Car/CarController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scr/Managment/GameStateSystem.cs" />
     </changedPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -227,7 +225,7 @@
       <workItem from="1610615542362" duration="2617000" />
       <workItem from="1610992255780" duration="3554000" />
       <workItem from="1612699746080" duration="12628000" />
-      <workItem from="1618765501198" duration="3380000" />
+      <workItem from="1618765501198" duration="4051000" />
     </task>
     <servers />
   </component>
